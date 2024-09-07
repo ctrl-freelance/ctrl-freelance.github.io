@@ -14,7 +14,7 @@ params:
   images: 
     - "images/hero-image.png"
 
-  #logo: "images/key.jpg"
+  logo: "images/key.jpg"
 
   favicons:
     themeColor: "#FFFFFF"

@@ -1,4 +1,5 @@
 baseURL: "https://ctrl-freelance.github.io/"
+relativeURLs: true
 theme: "up-business-theme"
 languageCode: "en-us"
 

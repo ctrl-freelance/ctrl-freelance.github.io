@@ -60,7 +60,7 @@ menus:
 
   buttons:
     - name: "Book a call"
-      url: "/#"
+      url: "https://share-eu1.hsforms.com/1AQ2TrCMCQA6MHBBZTfdERg2ek13y"
       weight: 5
       pre: "btn btn-primary text-light"
 

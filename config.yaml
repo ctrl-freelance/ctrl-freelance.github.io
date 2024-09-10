@@ -84,7 +84,6 @@ menus:
     #- name: "Blog"
      # url: "/blog"
      # weight: 5
-
 taxonomies:
   series: "series"
   tags: "tags"

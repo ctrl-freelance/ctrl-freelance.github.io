@@ -43,7 +43,7 @@ menus:
       weight: 1
 
     - name: "How we work"
-      url: "/#"
+      url: "/#services"
       weight: 2
 
     - name: "Our team"
@@ -70,7 +70,7 @@ menus:
       weight: 1
 
     - name: "How we work"
-      url: "/#"
+      url: "/#services"
       weight: 2
 
     - name: "Our team"

@@ -11,7 +11,7 @@ summaryLength: 20
 
 params:
   title: "ctrl freelance Ltd"
-  description: "We specialise in providing services from translation to designing websites for our clients."
+  description: "We specialise in providing services from IT security consulting to designing and maintaining websites for our clients."
   images: 
     - "images/hero-image.png"
 
@@ -42,7 +42,7 @@ menus:
       url: "/#hero"
       weight: 1
 
-    - name: "How we work"
+    - name: "Services"
       url: "/#services"
       weight: 2
 
@@ -69,7 +69,7 @@ menus:
       url: "/#hero"
       weight: 1
 
-    - name: "How we work"
+    - name: "Services"
       url: "/#services"
       weight: 2
 

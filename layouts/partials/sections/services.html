@@ -1,43 +1,45 @@
 <section class="section services py-5">
   <section id="services">
    <style>
-        .ticker-container {
-            width: 100%;
-            overflow: hidden;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .ticker {
-            display: flex;
-            animation: ticker 20s linear infinite;
-        }
-        .ticker-item {
-            margin-right: 50px;
-            white-space: nowrap;
-        }
-        .ticker-item a {
-            text-decoration: none;
-            color: #1a0dab;
-        }
-        @keyframes ticker {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        @media (max-width: 600px) {
+    .ticker-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+    }
     .ticker {
-        animation: ticker 30s linear infinite;
+        display: flex;
+        animation: ticker 20s linear infinite;
     }
     .ticker-item {
-        margin-right: 20px;
+        margin-right: 50px;
+        white-space: nowrap;
     }
-}
-    </style>
+    .ticker-item a {
+        text-decoration: none;
+        color: #1a0dab;
+    }
+    @keyframes ticker {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @media (max-width: 600px) {
+        .ticker {
+            animation: ticker 30s linear infinite;
+            flex-wrap: nowrap;
+        }
+        .ticker-item {
+            margin-right: 20px;
+            white-space: normal;
+        }
+    }
+</style>
 </head>
 <body>
     <div class="ticker-container">
@@ -83,6 +85,7 @@
             }
         });
     </script>
+
   </br>
   </br>
   </br>

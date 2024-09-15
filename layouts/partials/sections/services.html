@@ -1,5 +1,99 @@
 <section class="section services py-5">
   <section id="services">
+   <style>
+    .ticker-container {
+        width: 100%;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .ticker {
+        display: flex;
+        animation: ticker 20s linear infinite;
+        align-items: center;
+    }
+    .ticker-item {
+        margin-right: 50px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .ticker-item a {
+        text-decoration: none;
+        color: #1a0dab;
+    }
+    @keyframes ticker {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @media (max-width: 600px) {
+        .ticker {
+            animation: ticker 30s linear infinite;
+            flex-wrap: nowrap;
+        }
+        .ticker-item {
+            margin-right: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .ticker-container {
+            height: 50px; /* Set a fixed height for the ticker container */
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="ticker-container">
+        <div class="ticker" id="ticker"></div>
+    </div>
+
+    <script>
+        const RSS_URL = 'https://www.wired.com/feed/rss';
+
+        async function fetchRSSFeed(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const rssText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(rssText, 'text/xml');
+                return xmlDoc;
+            } catch (error) {
+                console.error('Error fetching RSS feed:', error);
+            }
+        }
+
+        function displayTicker(xmlDoc) {
+            const items = xmlDoc.querySelectorAll('item');
+            let html = '';
+            items.forEach((item, index) => {
+                if (index < 10) { // Display only the first 10 items
+                    const title = item.querySelector('title').textContent;
+                    const link = item.querySelector('link').textContent;
+                    html += `
+                        <div class="ticker-item">
+                            <a href="${link}" target="_blank" rel="noopener">${title}</a>
+                        </div>
+                    `;
+                }
+            });
+            document.getElementById('ticker').innerHTML = html;
+        }
+
+        fetchRSSFeed(RSS_URL).then(xmlDoc => {
+            if (xmlDoc) {
+                displayTicker(xmlDoc);
+            }
+        });
+    </script>
+
    </br>
   </br>
   </br>

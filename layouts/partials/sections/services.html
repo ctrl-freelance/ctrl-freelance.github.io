@@ -17,6 +17,7 @@
     .ticker-item {
         margin-right: 50px;
         white-space: nowrap;
+        flex-shrink: 0; /* Prevent items from shrinking */
     }
     .ticker-item a {
         text-decoration: none;
@@ -38,9 +39,10 @@
         .ticker-item {
             margin-right: 20px;
             white-space: nowrap; /* Ensure text doesn't wrap */
+            flex-shrink: 0; /* Prevent items from shrinking */
         }
         .ticker-container {
-            height: 50px; /* Set a fixed height for the ticker container */
+            height: auto; /* Allow the container to adjust height automatically */
         }
     }
 </style>

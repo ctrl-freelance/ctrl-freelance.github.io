@@ -12,6 +12,7 @@
     .ticker {
         display: flex;
         animation: ticker 20s linear infinite;
+        align-items: center; /* Ensure items are centered vertically */
     }
     .ticker-item {
         margin-right: 50px;
@@ -36,7 +37,10 @@
         }
         .ticker-item {
             margin-right: 20px;
-            white-space: normal;
+            white-space: nowrap; /* Ensure text doesn't wrap */
+        }
+        .ticker-container {
+            height: 50px; /* Set a fixed height for the ticker container */
         }
     }
 </style>

@@ -31,10 +31,10 @@ params:
   location:
     - "London, United Kingdom. E17 9PX"
   contact:
-    - "support@ctrl-freelance.com"
+    - "info@ctrl-freelance.com"
     - ""
 
-  copyright: "2024 ctrl freelance"
+  copyright: "© 2024 ctrl freelance"
 
 menus:
   main:
@@ -46,13 +46,13 @@ menus:
       url: "/#services"
       weight: 2
 
-    - name: "Our team"
+    - name: "Vacancies"
       url: "/#"
       weight: 3
 
-    - name: "Pricing"
-      url: "/#"
-      weight: 4
+    #- name: "Pricing"
+     # url: "/#"
+     # weight: 4
 
     #- name: "Blog"
      # url: "/blog"
@@ -73,13 +73,13 @@ menus:
       url: "/#services"
       weight: 2
 
-    - name: "Our team"
+    - name: "Vacancies"
       url: "/#"
       weight: 3
 
-    - name: "Pricing"
-      url: "/#"
-      weight: 4
+    #- name: "Pricing"
+     # url: "/#"
+     # weight: 4
 
     #- name: "Blog"
      # url: "/blog"

@@ -4,43 +4,47 @@
 
     
 <style>
-        .ticker-container {
-            width: 100%;
-            height: 50px; /* Adjust this height as needed */
-            overflow: hidden; /* Ensure content doesn't spill out */
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .ticker {
-            display: flex;
-            animation: ticker 20s linear infinite;
-        }
-        .ticker-item {
-            margin-right: 50px;
-            white-space: nowrap;
-        }
-        .ticker-item a {
-            text-decoration: none;
-            color: #1a0dab;
-        }
-        @keyframes ticker {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        @media (max-width: 600px) {
-            .ticker {
-                animation: ticker 30s linear infinite;
-            }
-            .ticker-item {
-                margin-right: 20px;
-            }
-        }
+.ticker-container {
+    width: 100%;
+    height: 100px; /* Adjust this height as needed */
+    overflow: hidden; /* Ensure content doesn't spill out */
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ticker {
+    display: flex;
+    animation: ticker 20s linear infinite;
+}
+.ticker-item {
+    margin-right: 50px;
+    white-space: nowrap;
+}
+.ticker-item a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@media (max-width: 600px) {
+    .ticker {
+        animation: ticker 30s linear infinite;
+    }
+    .ticker-item {
+        margin-right: 20px;
+    }
+}
+.ticker-container:hover .ticker {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
+
     </style>
 </head>
 <body>
